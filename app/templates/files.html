@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h1>Images</h1>
+
+{% for photo_names in photo_names %}
+<div class="container">
+    <div class="thumbnail">
+        <img class="img-responsive" src=  "{{url_for('static', filename='uploads/' + photo_names)}}" alt="Image">
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
